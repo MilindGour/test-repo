@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spacer { flex: 1 1 auto; }
+.app-container { padding: 20px 40px 0 };
+.width-100 { width: 100%; }
+
+.make-flex { 
+    display: flex !important;
+    
+    &.around {
+        justify-content: space-between;
+    }
+}

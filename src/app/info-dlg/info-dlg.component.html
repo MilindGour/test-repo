@@ -1,0 +1,26 @@
+<h2 mat-dialog-title class="make-flex around">
+    Information Capture
+    <button mat-icon-button (click)="onCloseDialog(false)"> <mat-icon>close</mat-icon> </button>
+</h2>
+<mat-dialog-content>
+    <form [formGroup]="infoForm" class="form-container">
+        <mat-form-field class="width-100">
+            <input formControlName="fullName" matInput placeholder="Full name">
+            <mat-error *ngIf="f.fullName.invalid">Full name is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="width-100">
+            <input formControlName="age" matInput placeholder="Age" type="number">
+            <mat-error *ngIf="f.age.invalid">Age is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="width-100">
+            <input formControlName="email" matInput placeholder="Email" type="email">
+            <mat-error *ngIf="f.email.invalid">Email is required.</mat-error>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCloseDialog(false)">Cancel</button>
+    <button mat-button color="primary" (click)="onCloseDialog(true)">Confirm</button>
+</mat-dialog-actions>
