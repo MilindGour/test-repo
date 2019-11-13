@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
 import { InfoDlgComponent } from './info-dlg/info-dlg.component';
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent {
   age: number = 0;
   email: string = "";
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private snackbar: MatSnackBar) {}
   openDialog() {
     let dlgRef = this.dialog.open(InfoDlgComponent, {
       data: {
@@ -34,5 +34,9 @@ export class AppComponent {
         this.email = "";
       }
     });
+  }
+
+  openSnackbar() {
+    this.snackbar.open("This is a sample snackbar!", "Yay!", { horizontalPosition: "center", verticalPosition: "top" });
   }
 }
