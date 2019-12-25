@@ -16,16 +16,29 @@ export class FormComponentComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.theFormGroup.disable();
   }
 
   initForm() {
     this.theFormGroup = this.fb.group({
       firstName: ["", [Validators.required]],
-      lastName: ["", [Validators.required]]
+      lastName: ["", [Validators.required]],
+      favLetter: ["", [Validators.required]]
     });
   }
 
   onGetRawValueClicked() {
     this.formRawValue = this.theFormGroup.getRawValue();
+  }
+
+  onEnableDisableClick() {
+    if (this.theFormGroup.disabled) {
+      this.theFormGroup.enable();
+    } else {
+      this.theFormGroup.disable();
+    }
+  }
+  onResetClick() {
+    this.theFormGroup.reset();
   }
 }
