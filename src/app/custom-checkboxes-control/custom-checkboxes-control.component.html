@@ -1,0 +1,8 @@
+<form novalidate [formGroup]="miniForm" class="form-container">
+  <h1 class="mat-body">Please select your fav fruits:</h1>
+  <div formArrayName="cb" class="width-50" *ngFor="let cbItem of miniForm.get('cb').controls">
+    <mat-checkbox (change)="onCheckboxChange($event, cbItem)">{{cbItem.value.key}} - {{cbItem.value.value}}</mat-checkbox>
+  </div>
+</form>
+<div class="mat-body">Control Value: {{controlValue}}</div>
+<!-- *ngFor="let cbItem of miniForm.get('cb').controls" -->

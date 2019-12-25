@@ -6,23 +6,32 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModules } from './material-modules.module';
 import { InfoDlgComponent } from './info-dlg/info-dlg.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
+import { FormComponentComponent } from './form-component/form-component.component';
+import { CustomCheckboxesControlComponent } from './custom-checkboxes-control/custom-checkboxes-control.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    InfoDlgComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModules,
-    ReactiveFormsModule
-  ],
-  providers: [{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { disableClose: true, hasBackdrop: true }}],
-  bootstrap: [AppComponent],
-  entryComponents: [InfoDlgComponent]
+   declarations: [
+      AppComponent,
+      InfoDlgComponent,
+      FormComponentComponent,
+      CustomCheckboxesControlComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MaterialModules,
+      FormsModule,
+      ReactiveFormsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ],
+   entryComponents: [
+      InfoDlgComponent
+   ]
 })
 export class AppModule { }
