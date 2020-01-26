@@ -13,6 +13,9 @@
       <app-custom-checkboxes-control formControlName="favLetter"></app-custom-checkboxes-control>
       <mat-error *ngIf="theFormGroup.get('favLetter').touched && theFormGroup.get('favLetter').invalid">Favorite Letters are required.</mat-error> -->
   </div>
+  <div class="width-100">
+    <app-custom-input-control></app-custom-input-control>
+  </div>
 </form>
 <button mat-button (click)="onEnableDisableClick()">{{ theFormGroup.disabled ? "Enable" : "Disable" }}</button>
 <button mat-button (click)="onResetClick()">Reset</button>

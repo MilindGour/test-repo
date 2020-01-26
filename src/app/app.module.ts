@@ -10,13 +10,16 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { CustomCheckboxesControlComponent } from './custom-checkboxes-control/custom-checkboxes-control.component';
+import { CustomInputControlComponent } from './custom-input-control/custom-input-control.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
       AppComponent,
       InfoDlgComponent,
       FormComponentComponent,
-      CustomCheckboxesControlComponent
+      CustomCheckboxesControlComponent,
+      CustomInputControlComponent
    ],
    imports: [
       BrowserModule,
@@ -24,7 +27,8 @@ import { CustomCheckboxesControlComponent } from './custom-checkboxes-control/cu
       BrowserAnimationsModule,
       MaterialModules,
       FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [
